@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.E.T.E - Physik Erklärungs- und Testprogramm</title>
+    <style>
+        body {
+            background-color: #00607f;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .category-box {
+            background-color: #2b2b2b;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        #login-container {
+            text-align: center;
+            margin-top: 20%;
+        }
+
+        #login-form {
+            background-color: #00607f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00607f;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        table {
+            font-family: 'Arial', sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ffffff;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2b2b2b;
+        }
+
+        .video-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .video {
+            width: 48%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 150px; /* Reduziere die Höhe der Videos */
+            border: 0;
+            border-radius: 10px;
+        }
+
+        .chat-box {
+            background-color: #2b2b2b;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .chat-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .chat-output {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login-container">
+        <div id="login-form">
+            <h1>P.E.T.E - Physik Erklärungs- und Testprogramm</h1>
+            <form id="login" onsubmit="checkLogin(); return false;">
+                <input type="text" id="username" class="login-input" placeholder="Benutzername">
+                <input type="password" id="passcode" class="login-input" placeholder="Passcode">
+                <button type="submit" class="login-button">Einloggen</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+
+        <h1>P.E.T.E - Physik Erklärungs- und Testprogramm der E-Lehre (9te Klasse)</h1>
+        <p>Willkommen zu P.E.T.E - Physik Erklärungs- und Testprogramm zum Thema der Elektrizitätslehre.</p>
+
+        <!-- Elektrizitätslehre Abschnitte -->
+        <div class="category-box" id="electricity">
+            <div class="category-title"><h2>Elektrizitätslehre (von ChatGPT)</h2></div>
+            <p>
+                Die Elektrizitätslehre beschäftigt sich mit elektrischem Strom und seinen Eigenschaften.
+            </p>
+            <!-- ... Weitere Inhalte für Elektrizitätslehre ... -->
+        </div>
+
+        <div class="category-box" id="ohms-law">
+            <div class="category-title"><h2>Ohmsches Gesetz und Kennlinien (von ChatGPT)</h2></div>
+            <h3>Ohmscher Widerstand</h3>
+            <p>
+                Der ohmsche Widerstand ist ein grundlegendes Konzept in der Elektrotechnik und beschreibt den Widerstand eines Bauelements gegenüber dem elektrischen Strom.
+            </p>
+            <h4>Definition:</h4>
+            <p>
+                Der ohmsche Widerstand (\( R \)) gibt an, wie stark ein Bauelement den Fluss des elektrischen Stroms behindert. Es wird in Ohm (\( \Omega \)) gemessen.
+            </p>
+            <h4>Aufgaben:</h4>
+            <ol>
+                <li>Berechne den Widerstand eines Bauelements, wenn die Spannung \( U = 12 \) Volt und der Strom \( I = 2 \) Ampere beträgt.</li>
+                <li>Bestimme den Strom, der durch einen Widerstand von \( 8 \) Ohm fließt, wenn die Spannung \( U = 24 \) Volt beträgt.</li>
+                <li>Welche Spannung liegt an einem Widerstand von \( 5 \) Ohm an, wenn der Strom \( I = 3 \) Ampere beträgt?</li>
+            </ol>
+            <!-- ... Weitere Erklärungen und Aufgaben für andere Punkte ... -->
+        </div>
+
+        <!-- ... Weitere Abschnitte nach Bedarf ... -->
+
+        <div class="category-box" id="formula-table">
+            <div class="category-title"><h2>Formelzeichen und Einheiten</h2></div>
+            <table>
+                <tr>
+                    <th>Größe</th>
+                    <th>Formelzeichen</th>
+                    <th>Einheit</th>
+                </tr>
+                <tr>
+                    <td>Spannung</td>
+                    <td>U</td>
+                    <td>Volt (V)</td>
+                </tr>
+                <tr>
+                    <td>Stromstärke</td>
+                    <td>I</td>
+                    <td>Ampere (A)</td>
+                </tr>
+                <tr>
+                    <td>Widerstand</td>
+                    <td>R</td>
+                    <td>Ohm (&Omega;)</td>
+                </tr>
+                <tr>
+                    <td>Ladung</td>
+                    <td>Q</td>
+                    <td>Coulomb (C)</td>
+                </tr>
+                <tr>
+                    <td>Zeit</td>
+                    <td>t</td>
+                    <td>Sekunde (s)</td>
+                </tr>
+                <tr>
+                    <td>Leistung</td>
+                    <td>P</td>
+                    <td>Watt (W)</td>
+                </tr>
+                <tr>
+                    <td>Energie</td>
+                    <td>E</td>
+                    <td>Joule (J)</td>
+                </tr>
+                <tr>
+                    <td>Frequenz</td>
+                    <td>f</td>
+                    <td>Hertz (Hz)</td>
+                </tr>
+                <tr>
+                    <td>Kraft</td>
+                    <td>F</td>
+                    <td>Newton (N)</td>
+                </tr>
+                <tr>
+                    <td>Masse</td>
+                    <td>m</td>
+                    <td>Kilogramm (kg)</td>
+                </tr>
+                <tr>
+                    <td>Beschleunigung</td>
+                    <td>a</td>
+                    <td>Meter pro Quadratsekunde (m/s²)</td>
+                </tr>
+                <tr>
+                    <td>Arbeit</td>
+                    <td>W</td>
+                    <td>Joule (J)</td>
+                </tr>
+                <tr>
+                    <td>Druck</td>
+                    <td>P</td>
+                    <td>Pascal (Pa)</td>
+                </tr>
+                <tr>
+                    <td>Dichte</td>
+                    <td>&rho;</td>
+                    <td>Kilogramm pro Kubikmeter (kg/m³)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="category-box video-box">
+            <div class="video">
+                <iframe width="100%" height="100" src="https://www.youtube.com/embed/wKW6gclbdf0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe width="100%" height="100" src="https://www.youtube.com/embed/Sl7utffKpEE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe width="100%" height="100" src="https://www.youtube.com/embed/aHCFAJ4wmH4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe width="100%" height="100" src="https://www.youtube.com/embed/-HM18u4eQLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+
+        <div class="category-box chat-box">
+            <div class="category-title"><h2>Mathbot</h2></div>
+            <div class="chat-output" id="chatOutput"></div>
+            <input type="text" id="chatInput" class="chat-input" placeholder="Frage P.E.T.E...">
+            <button onclick="askPete()" class="login-button">Senden</button>
+        </div>
+
+        <script>
+            function checkLogin() {
+                var username = document.getElementById('username').value;
+                var passcode = document.getElementById('passcode').value;
+                if (username === 'Eido9c' && passcode === 'Klasse9Strobel') {
+                    document.getElementById('login-container').classList.add('hidden');
+                    document.getElementById('main-content').classList.remove('hidden');
+                } else {
+                    alert('Falscher Benutzername oder Passcode. Bitte versuchen Sie es erneut.');
+                }
+            }
+
+            function askPete() {
+                var question = document.getElementById('chatInput').value;
+                var peteResponse = getPeteResponse(question);
+                var chatOutput = document.getElementById('chatOutput');
+                chatOutput.innerHTML += '<p><strong>Ich:</strong> ' + question + '</p>';
+                chatOutput.innerHTML += '<p><strong>P.E.T.E:</strong> ' + peteResponse + '</p>';
+                document.getElementById('chatInput').value = '';
+            }
+
+            function getPeteResponse(question) {
+                // Einfache Implementierung für den Chatbot-Dienst
+                if (question.toLowerCase().startsWith('was ist')) {
+                    try {
+                        var result = eval(question.substring(7).trim());
+                        return 'Die Lösung lautet: ' + result;
+                    } catch (error) {
+                        return 'Ungültiger Ausdruck';
+                    }
+                } else {
+                    return 'Ich kann nur einfache mathematische Ausdrücke berechnen, wenn du mit "Was ist..." fragst.';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
