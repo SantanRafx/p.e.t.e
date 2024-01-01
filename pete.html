@@ -97,7 +97,7 @@
 
         .video iframe {
             width: 100%;
-            height: 150px; /* Reduziere die Höhe der Videos */
+            height: 150px;
             border: 0;
             border-radius: 10px;
         }
@@ -146,13 +146,13 @@
         <h1>P.E.T.E - Physik Erklärungs- und Testprogramm der E-Lehre (9te Klasse)</h1>
         <p>Willkommen zu P.E.T.E - Physik Erklärungs- und Testprogramm zum Thema der Elektrizitätslehre.</p>
 
-        <!-- Elektrizitätslehre Abschnitte -->
+
         <div class="category-box" id="electricity">
             <div class="category-title"><h2>Elektrizitätslehre (von ChatGPT)</h2></div>
             <p>
                 Die Elektrizitätslehre beschäftigt sich mit elektrischem Strom und seinen Eigenschaften.
             </p>
-            <!-- ... Weitere Inhalte für Elektrizitätslehre ... -->
+       
         </div>
 
         <div class="category-box" id="ohms-law">
@@ -171,10 +171,9 @@
                 <li>Bestimme den Strom, der durch einen Widerstand von \( 8 \) Ohm fließt, wenn die Spannung \( U = 24 \) Volt beträgt.</li>
                 <li>Welche Spannung liegt an einem Widerstand von \( 5 \) Ohm an, wenn der Strom \( I = 3 \) Ampere beträgt?</li>
             </ol>
-            <!-- ... Weitere Erklärungen und Aufgaben für andere Punkte ... -->
+ 
         </div>
 
-        <!-- ... Weitere Abschnitte nach Bedarf ... -->
 
         <div class="category-box" id="formula-table">
             <div class="category-title"><h2>Formelzeichen und Einheiten</h2></div>
@@ -302,7 +301,7 @@
             }
 
             function getPeteResponse(question) {
-                // Einfache Implementierung für den Chatbot-Dienst
+
                 if (question.toLowerCase().startsWith('was ist')) {
                     try {
                         var result = eval(question.substring(7).trim());
